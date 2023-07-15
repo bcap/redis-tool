@@ -46,4 +46,5 @@ docker buildx build --push --platform linux/arm64,linux/amd64 --tag bcap/redis-t
 git add VERSION
 git commit -m "Release $VERSION"
 git tag $VERSION
+git push
 git push --tags
