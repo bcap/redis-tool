@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "delete",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}",
+            "args": ["delete", "-a", "localhost:6379", "-b", "1000", "--delete-batch", "100", "-p", "test-*50"],
+            "env": {
+                "UNSAFE_NO_CONFIRM": "true",
+            }
+        }
+    ]
+}
