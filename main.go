@@ -14,6 +14,11 @@ import (
 //go:embed VERSION
 var version string
 
+var description string = "" +
+	"-- redis-tool\n\n" +
+	"Tool to iterate redis keys in an efficient and safe manner\n" +
+	"source: https://github.com/bcap/redis-tool\n"
+
 type Args struct {
 	Count        *CountArgs  `arg:"subcommand:count"`
 	Print        *PrintArgs  `arg:"subcommand:print"`
@@ -24,6 +29,10 @@ type Args struct {
 
 func (*Args) Version() string {
 	return version
+}
+
+func (*Args) Description() string {
+	return description
 }
 
 func main() {
