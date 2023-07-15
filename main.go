@@ -99,10 +99,13 @@ func Count(ctx context.Context, parser *arg.Parser, client UnifiedClient, args A
 }
 
 func Print(ctx context.Context, parser *arg.Parser, client UnifiedClient, args Args) error {
+	mutex := sync.Mutex{}
 	callback := func(_ context.Context, _ *Client, keys []string) error {
+		mutex.Lock()
 		for _, key := range keys {
 			fmt.Println(key)
 		}
+		mutex.Unlock()
 		return nil
 	}
 
@@ -186,8 +189,8 @@ func deleteWithoutCount(ctx context.Context, parser *arg.Parser, client UnifiedC
 }
 
 func deleteCallback(batchSize int, logFile *os.File) func(ctx context.Context, client *Client, keys []string) error {
+	mutex := sync.Mutex{}
 	return func(ctx context.Context, client *Client, keys []string) error {
-		mutex := sync.Mutex{}
 		for idx := 0; idx < len(keys); idx += batchSize {
 			endIdx := idx + batchSize
 			if endIdx > len(keys) {
