@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/alexflint/go-arg v1.4.3
-	github.com/bcap/humanize v0.0.0-20230714005521-46ea6db21ea5
+	github.com/bcap/humanize v1.0.0
 	github.com/fatih/color v1.15.0
 	github.com/redis/go-redis/v9 v9.0.5
 )

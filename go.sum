@@ -2,8 +2,8 @@ github.com/alexflint/go-arg v1.4.3 h1:9rwwEBpMXfKQKceuZfYcwuc/7YY7tWJbFsgG5cAU/u
 github.com/alexflint/go-arg v1.4.3/go.mod h1:3PZ/wp/8HuqRZMUUgu7I+e1qcpUbvmS258mRXkFH4IA=
 github.com/alexflint/go-scalar v1.1.0 h1:aaAouLLzI9TChcPXotr6gUhq+Scr8rl0P9P4PnltbhM=
 github.com/alexflint/go-scalar v1.1.0/go.mod h1:LoFvNMqS1CPrMVltza4LvnGKhaSpc3oyLEBUZVhhS2o=
-github.com/bcap/humanize v0.0.0-20230714005521-46ea6db21ea5 h1:p+Onp3Yw6W2gTux6UCUuWh4KEsrMnCaaRdGM8fTHc58=
-github.com/bcap/humanize v0.0.0-20230714005521-46ea6db21ea5/go.mod h1:VobC8EqhpYCoutRVvwnEfjXnmfLq2LL8rRuH4iW8gck=
+github.com/bcap/humanize v1.0.0 h1:KzQ1kjr/jyymIAF2+Pt/vQpLwdMIgl1jo5ONuT5fJEA=
+github.com/bcap/humanize v1.0.0/go.mod h1:VobC8EqhpYCoutRVvwnEfjXnmfLq2LL8rRuH4iW8gck=
 github.com/bsm/ginkgo/v2 v2.7.0 h1:ItPMPH90RbmZJt5GtkcNvIRuGEdwlBItdNVoyzaNQao=
 github.com/bsm/gomega v1.26.0 h1:LhQm+AFcgV2M0WyKroMASzAzCAJVpAxQXv4SaI9a69Y=
 github.com/cespare/xxhash/v2 v2.2.0 h1:DC2CZ1Ep5Y4k3ZQ899DldepgrayRUGE6BBZ/cd9Cj44=
