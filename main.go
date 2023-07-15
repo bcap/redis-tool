@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	_ "embed"
 	"fmt"
 	"log"
 	"os"
@@ -9,6 +10,9 @@ import (
 
 	"github.com/alexflint/go-arg"
 )
+
+//go:embed VERSION
+var version string
 
 type Args struct {
 	Count        *CountArgs  `arg:"subcommand:count"`
@@ -18,9 +22,14 @@ type Args struct {
 	Cluster      bool        `arg:"-c,--cluster" help:"connect in cluster mode"`
 }
 
+func (*Args) Version() string {
+	return version
+}
+
 func main() {
 	args := Args{}
 	parser := arg.MustParse(&args)
+
 	if parser.Subcommand() == nil {
 		parser.Fail("no command provided")
 	}
