@@ -80,13 +80,11 @@ func ScanKeys(ctx context.Context, client *Client, pattern string, blockSize int
 			return err
 		}
 
-		if len(keys) == 0 {
-			break
-		}
-
-		atomic.AddInt64(&processedKeys, int64(len(keys)))
-		if err := callbackFn(ctx, client, keys); err != nil {
-			return err
+		if len(keys) > 0 {
+			atomic.AddInt64(&processedKeys, int64(len(keys)))
+			if err := callbackFn(ctx, client, keys); err != nil {
+				return err
+			}
 		}
 
 		if nextCursor == 0 {
