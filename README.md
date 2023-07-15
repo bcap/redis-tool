@@ -26,7 +26,7 @@ Currently the only command that causes mutations is the `delete` command
 
 Counting all keys that match pattern `test-key-000000*800`:
 
-```shell
+```
 % go run . count -a localhost:6379 -p 'test-key-000000*800'
 2023/07/15 17:46:00 [localhost:6379] processed 10 keys (~13.58 keys/s)
 10
@@ -34,7 +34,7 @@ Counting all keys that match pattern `test-key-000000*800`:
 
 Printing the keys from the example above:
 
-```shell
+```
 % go run . print -a localhost:6379 -p 'test-key-000000*800'
 2023/07/15 17:47:39 [localhost:6379] processed 10 keys (~13.76 keys/s)
 test-key-0000000800
@@ -57,7 +57,7 @@ Before deletion the tool does a few safety measure like:
 3. Asks for user confirmation. The user needs to type the redis address passed as input to confirm deletion. Confirmation takes a few seconds to be asked for, forcing the user to slow down.
 4. Logs deleted key names to a file
 
-```shell
+```
 % go run . delete -a localhost:6379 -p 'test-key-000000*800'
 2023/07/15 17:48:35 Counting keys for deletion
 2023/07/15 17:48:35 [localhost:6379] processed 10 keys (~12.63 keys/s)
