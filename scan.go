@@ -52,11 +52,6 @@ func ScanKeys(ctx context.Context, client *Client, pattern string, blockSize int
 	var processedKeys int64
 	var cursor uint64
 
-	infoCmd := client.Info(ctx)
-	if infoCmd.Err() != nil {
-		return infoCmd.Err()
-	}
-
 	logProgress := func() {
 		timeTaken := time.Since(start)
 		processedKeys := atomic.LoadInt64(&processedKeys)
