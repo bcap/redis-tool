@@ -11,11 +11,10 @@ fi
 
 CURRENT="$(cat VERSION)"
 
-echo "Current version:   $CURRENT"
-
 if [[ "$#" > 0 ]]; then
     VERSION="$1"
 else
+    echo "Current version:   $CURRENT"
     read -p "Enter new version: " VERSION
 fi
 
