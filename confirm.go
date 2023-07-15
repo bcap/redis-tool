@@ -23,7 +23,7 @@ func UserConfirm(ctx context.Context, message string, confirmationText string, t
 	}
 
 	if thinkTime > 0 {
-		log.Printf("Waiting %v before asking for confirmation\n", thinkTime)
+		log.Printf("Waiting %v before asking for user confirmation\n", thinkTime)
 		select {
 		case <-time.After(thinkTime):
 		case <-ctx.Done():

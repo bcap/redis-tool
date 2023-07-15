@@ -62,9 +62,9 @@ Before deletion the tool does a few safety measure like:
 2023/07/15 17:48:35 Counting keys for deletion
 2023/07/15 17:48:35 [localhost:6379] processed 10 keys (~12.63 keys/s)
 2023/07/15 17:48:35 warning Deleting an estimate of 10 keys with pattern test-key-000000*800 in localhost:6379.
-2023/07/15 17:48:35 Check /var/folders/t1/qlq0sfmd49l77c8dbr169yl80000gn/T/listed-redis-keys-for-deletion-localhost:6379-601525474 for selected Keys.
+2023/07/15 17:48:35 Check /var/folders/t1/qlq0sfmd49l77c8dbr169yl80000gn/T/listed-redis-keys-for-deletion-localhost:6379-601525474 for selected keys.
 2023/07/15 17:48:35 Keys being deleted will be logged to /var/folders/t1/qlq0sfmd49l77c8dbr169yl80000gn/T/deleted-redis-keys-localhost:6379-583810150
-2023/07/15 17:48:35 Waiting 5s before asking for confirmation
+2023/07/15 17:48:35 Waiting 5s before asking for user confirmation
 Type localhost:6379 to confirm: localhost:6379
 2023/07/15 17:49:07 [localhost:6379] processed 10 keys (~9.77 keys/s)
 2023/07/15 17:49:07 Deleted 10 keys in 1s24ms

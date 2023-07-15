@@ -69,7 +69,7 @@ func deleteWithCount(ctx context.Context, parser *arg.Parser, client UnifiedClie
 
 	msg := fmt.Sprintf(""+
 		"%s Deleting an estimate of %d keys with pattern %s in %s.\n"+
-		"Check %s for selected Keys.\n"+
+		"Check %s for selected keys.\n"+
 		"Keys being deleted will be logged to %s",
 		mildWarning, count, args.Delete.Pattern, args.RedisAddress,
 		listedKeysFile.Name(), deletionLogFile.Name(),
