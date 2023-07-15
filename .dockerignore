@@ -1,3 +1,7 @@
 Dockerfile
+Makefile
+README.md
+
+*.sh
 .redis-data/
 __debug_bin
