@@ -10,8 +10,6 @@
 
 There are docker images as well: `docker run bcap/redis-tool -h`
 
-NOTE: be sure to have your `go/bin` directory in your `PATH` env var
-
 ## What
 
 This is a tool to iterate redis keys in an efficient and safe manner. Current commands are:
