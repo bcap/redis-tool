@@ -51,7 +51,7 @@ test-key-0000006800
 
 Deleting those keys:
 
-Before deletion the tool does a few safety measure like:
+Before deletion the tool does a few **safety measures** like:
 1. Counts the number of keys that will be deleted
 2. Writes the key names to a file
 3. Asks for user confirmation. The user needs to type the redis address passed as input to confirm deletion. Confirmation takes a few seconds to be asked for, forcing the user to slow down.
