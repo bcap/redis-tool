@@ -11,7 +11,7 @@ RUN find /go/pkg/mod -name 'go.sum' | xargs -I {} sh -c 'cd $(dirname {}) && go 
 COPY . .
 RUN go build .
 
-
+# dist
 FROM alpine
 
 WORKDIR /app
