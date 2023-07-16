@@ -22,6 +22,7 @@ var description string = "" +
 type Args struct {
 	Count        *CountArgs  `arg:"subcommand:count" help:"Counts keys based on a key name pattern"`
 	Print        *PrintArgs  `arg:"subcommand:print" help:"Prints keys names based on a key name pattern"`
+	Dump         *DumpArgs   `arg:"subcommand:dump" help:"Prints keys and theyir values based on a key name pattern"`
 	Delete       *DeleteArgs `arg:"subcommand:delete" help:"Deletes keys based on a key name pattern"`
 	RedisAddress string      `arg:"-a,--address,required" help:"redis server address. Eg: localhost:6379"`
 	Cluster      bool        `arg:"-c,--cluster" help:"connect in cluster mode"`
@@ -56,6 +57,8 @@ func main() {
 		err = CountCmd(ctx, parser, client, args)
 	case args.Print != nil:
 		err = PrintCmd(ctx, parser, client, args)
+	case args.Dump != nil:
+		err = DumpCmd(ctx, parser, client, args)
 	case args.Delete != nil:
 		err = DeleteCmd(ctx, parser, client, args)
 	}

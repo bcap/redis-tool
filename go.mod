@@ -7,6 +7,7 @@ require (
 	github.com/bcap/humanize v1.0.0
 	github.com/fatih/color v1.15.0
 	github.com/redis/go-redis/v9 v9.0.5
+	golang.org/x/sync v0.3.0
 )
 
 require (
