@@ -20,9 +20,9 @@ var description string = "" +
 	"source: https://github.com/bcap/redis-tool\n"
 
 type Args struct {
-	Count        *CountArgs  `arg:"subcommand:count"`
-	Print        *PrintArgs  `arg:"subcommand:print"`
-	Delete       *DeleteArgs `arg:"subcommand:delete"`
+	Count        *CountArgs  `arg:"subcommand:count" help:"Counts keys based on a key name pattern"`
+	Print        *PrintArgs  `arg:"subcommand:print" help:"Prints keys names based on a key name pattern"`
+	Delete       *DeleteArgs `arg:"subcommand:delete" help:"Deletes keys based on a key name pattern"`
 	RedisAddress string      `arg:"-a,--address,required" help:"redis server address. Eg: localhost:6379"`
 	Cluster      bool        `arg:"-c,--cluster" help:"connect in cluster mode"`
 }
