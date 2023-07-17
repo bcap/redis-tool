@@ -3,5 +3,5 @@ Makefile
 README.md
 
 *.sh
-.redis-data/
+test-redis/data/
 __debug_bin

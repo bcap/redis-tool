@@ -94,7 +94,7 @@ BEGIN {
 
 }' | grep . > $DATA_FILE
 
-log writing data to redis and logging to $LOG_FILE
+log writing data to redis and logging results to $LOG_FILE
 
 # cat $DATA_FILE
 

@@ -1,0 +1,5 @@
+FROM redis/redis-stack-server:latest
+
+COPY redis-stack.conf /etc
+
+CMD ["redis-server", "/etc/redis-stack.conf"]

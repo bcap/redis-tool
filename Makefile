@@ -1,5 +1,11 @@
 .DEFAULT_GOAL := build
 
+redis:
+	test-redis/run.sh
+
+fill-redis:
+	test-redis/fill.sh
+
 build:
 	docker build -t bcap/redis-tool:latest .
 

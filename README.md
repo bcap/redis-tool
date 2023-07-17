@@ -73,8 +73,8 @@ Type localhost:6379 to confirm: localhost:6379
 # Contributing
 
 ## redis test data
-- `./run-test-redis-server.sh` to start a local redis server through docker. Redis data is persisted at `.redis-data`
-- `./fill-test-redis-server.sh` will create 1M keys in the local redis in the format `test-key-0000000001 test-value-0000000001`
+- `make redis` to start a local redis server (stack version) through docker. Redis data is persisted at `test-redis/data`
+- `make fill-redis` will create around million keys of varying types on the local redis server
 
 ## development
 - `go run .` to run locally
